@@ -26,17 +26,15 @@ def vowel_count(text: str) -> int:
 
 # Part 2: short_lists
 def short_lists(items: list[list[int]]) -> list[list[int]]:
-    # TODO: Purpose: the function looks at a nested list so it has a list inside another list so we are checking if the length of the list inside the bigger list's length is equal to 2 if so we are able to only filter to the lists that have a length of 2 or greater allowing for easy filtering with this function. 
-    # TODO: Input(s): this function contains a list inside a bigger list of integer values 
-    # TODO: Output: the function returns a list of the list of the intergers that has a length of greater than or equal to 2. 
-     result = []
-    
-       for item in items:
-            if len(item) == 2:
+    # Purpose: Filter for nested lists containing at least two integers.
+    # Input: items, a list of integer lists. Output: the matching lists.
+
+    result = []
+    for item in items:
+        if len(item) >= 2:
             result.append(item)
         
-        return result
-    raise NotImplementedError("Part 2: implement short_lists")
+    return result
 
 
 # Part 3: ascending_pairs
